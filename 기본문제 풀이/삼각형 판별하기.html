@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(a, b, c){
+                let answer, maxNum, num1, num2;
+
+                if (a < b) maxNum = b, num1 = a;
+                else maxNum = a, num1 = b;
+                if (maxNum < c)  num2 = maxNum, maxNum = c;
+                else num2 = c;
+
+                if(maxNum < (num1 + num2)) answer="YES"
+                else answer="NO"
+
+                return answer
+
+                // let answer="YES", max;
+                // let sum = a+b+c;
+                // if(a>b) max=0;
+                // else max=b;
+                // if(c>max) max=c;
+                // if((sum-max)<=max) answer="NO";
+                // return answer;
+                
+            }
+
+            console.log(solution(13, 33, 17));
+            console.log(solution(6, 7, 11));
+        </script>
+    </body>
+</html>

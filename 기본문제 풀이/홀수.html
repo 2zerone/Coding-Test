@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(arr){
+                let answer = [];
+                let Sum_min = [];
+                let minNum;
+                let Sum = 0;
+
+                for(let i=0; i<arr.length; i++) {
+                    if(arr[i] % 2 != 0) {
+                        Sum += arr[i],
+                        Sum_min.push(arr[i]);
+                    }
+                }
+
+                minNum = Math.min(...Sum_min);
+                answer.push(Sum);
+                answer.push(minNum);
+                  
+                return answer;
+
+                // let answer = [];
+                // let sum = 0, min = Number.MAX_SAFE_INTEGER
+                // for(let x of arr) {
+                //     if(x % 2 === 1) {
+                //        sum += x;
+                //        if(x<min) min = x; 
+                //     }
+                // }
+                // answer.push(sum);
+                // answer.push(min);
+            }
+            
+            arr=[12, 77, 38, 41, 53, 92, 85];
+            console.log(solution(arr));
+        </script>
+    </body>
+</html>
