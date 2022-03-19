@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(s){  
+                let answer;
+
+                if(s.length % 2 === 0) {
+                    answer = s[(s.length)/2-1] + s[(s.length)/2]
+                } else {
+                    answer = s[(s.length)/2-0.5]
+                }
+
+                return answer;
+
+                // let answer;
+                // let mid = Math.floor(s.length/2)
+                // if(s.length%2==1) answer=s.substring(mid, mid+1);       // substr(mid, 1);
+                // else answer=s.substring(mid-1, mid+1);                  // substr(mid-1, 2); 
+                // substring(시작, 종료)  종료-1까지 출력                  // substr(시작, 개수);
+
+                // return answer;
+            }
+            console.log(solution("maplestory"));
+        </script>
+    </body>
+</html>
+
