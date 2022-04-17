@@ -6,41 +6,34 @@
     <body>
         <script>
             function solution(s){
-                let answer="YES";
-                s=s.toLowerCase();
-                let len=s.length;
-                for(let i=0; i<Math.floor(len/2); i++){
-                    if(s[i]!=s[len-i-1]) return "NO";
-                }
+                let answer = 'YES';
+                s = s.toUpperCase();
+
+                if(s.split('').reverse().join('') != s) return answer = 'NO';
+                // split()은 문자열의 각 문자를 분리하여 배열로 변환
+                // reverse()는 해당 배열을 가져와 그 안에 있는 요소 뒤집음
+                // join()은 reverse() 함수에 의해 반전된 문자를 결합
+
                 return answer;
+
+                // let answer="YES";
+                // s=s.toLowerCase();
+                // let len=s.length;
+                // for(let i=0; i<Math.floor(len/2); i++){
+                //     if(s[i]!=s[len-i-1]) return "NO";
+                // }
+                // return answer;
+                
+                // Math.floor() 함수는 주어진 숫자와 같거나 작은 정수 중에서 가장 큰 수를 반환.
+                // ex) Math.floor(5.95) => 5 , Math.floor(-5.05) => -6
             }
             
-            let str="goooG";
+            let str="goo0oG";
             console.log(solution(str));
         </script>
     </body>
 </html>
 
-
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>출력결과</title>
-    </head>
-    <body>
-        <script>
-            function solution(s){
-                let answer="YES";
-                s=s.toLowerCase();
-                if(s.split('').reverse().join('')!=s) return "NO";    
-                return answer;
-            }
-            
-            let s="gooG";
-            console.log(solution(str));
-        </script>
-    </body>
-</html>
 
 
 
