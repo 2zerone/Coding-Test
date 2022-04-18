@@ -7,7 +7,7 @@
         <script>
             function solution(s){
                 let answer="YES";
-                s=s.toLowerCase().replace(/[^a-z]/g, '');
+                s=s.toLowerCase().replace(/[^a-z]/g, ''); // a-z까지의 알파벳 소문자를 제외한 것들 제거
                 if(s.split('').reverse().join('')!==s) return "NO";
                 return answer;
             }
