@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            // function map(predicate, thisArg) {
+            //     let list=[];
+            //     for(let i=0; i<a.length; i++) {
+            //         list.push(predicate(a[i], i));
+            //     }
+            //     return list;
+            // }
+
+            a = [10, 11, 12, 13, 14, 15];
+            let answer = a.map((v) => {
+                return v*v;
+            }, [1, 2]);
+            console.log(answer);
+
+            let answer2 = a.map((v) => {
+                if(v%2==0) return v;
+            }, [1, 2]);
+            console.log(answer2);
+            // [10, undefined, 12, undefined, 14, undefined] 
+            // 원본 배열과 길이가 같다.
+        </script>
+    </body>
+</html>
