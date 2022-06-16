@@ -1,9 +1,12 @@
-// K번째 수
+function solution(array, commands) {
+    let answer = [];
 
-const solution = (array, commands) => {
+    for(let i=0; i<commands.length; i++) {
+        const newArray = array.slice(commands[i][0]-1, commands[i][1]);
+        newArray.sort((a, b) => a - b);
+        answer.push(newArray[commands[i][2]-1]);
+        newArray.splice(0, newArray.length);
+    }
 
+    return answer;
 }
-
-const array = [1, 5, 2, 6, 3, 7, 4];
-const commands = [[2, 5, 3], [4, 4, 1], [1, 7, 3]];
-console.log(solution(array, commands));
