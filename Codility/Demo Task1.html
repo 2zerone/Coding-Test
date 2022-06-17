@@ -1,0 +1,29 @@
+<!-- 이해가 안됨 다시 봐야함.. -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(A) {
+                const arr = A.sort((a, b) => a - b);
+                let num = 1;
+
+                for(i=0; i<arr.length; i++) {
+                    if(arr[i] === num) num++;
+                }
+
+                
+                if([...arr] < 0) { // 실행해보니 전개연산자는 모든 요소가 조건식에 부합해야만 충족이 됨
+                    return 1;
+                } else {
+                    return num;
+                }
+            }
+
+            let array=[-1, 2, 3, 4];
+            console.log(solution(array));
+        </script>
+    </body>
+</html>
