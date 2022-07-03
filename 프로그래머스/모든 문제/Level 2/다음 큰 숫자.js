@@ -19,3 +19,12 @@ function solution(n) {
 
     return answer;
 } 
+
+// 내가 풀고 싶었던 정규표현식을 활용한 풀이법
+
+function nextBigNumber(n) {
+    var size = n.toString(2).match(/1/g).length
+    while(n++) {
+        if(size === n.toString(2).match(/1/g).length) return n
+    }
+}
