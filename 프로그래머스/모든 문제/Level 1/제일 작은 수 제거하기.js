@@ -1,17 +1,8 @@
-// 테스트케이스는 통과 하지만 정확성 0점
+// 완성본
 function solution(arr) {
     
-    arr.sort((a, b) => b - a);
-    let min = arr[0];
-    for(let x of arr) {
-        if(x < min) min = x;
-    }
-    
-    let answer = arr.filter((res) => res !== min);
-    
-    if(arr.length === 1) return [-1]
-    
-    return answer;
+    arr.splice(arr.indexOf(Math.min(...arr)), 1);
+    return arr.length ? arr : [-1];
 }
 
 // 정확성은 100점이지만 최솟값이 2개 이상일 경우 찝찝한 코드
