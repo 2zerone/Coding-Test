@@ -8,12 +8,13 @@
             function solution(s){         
                 let answer="";
                 for(let x of s){
-                    let num=x.charCodeAt();
-                    if(num>=97 && num<=122) answer+=String.fromCharCode(num-32);
+                    if(x===x.toLowerCase()) answer+=x.toUpperCase();
                     else answer+=x;
 
-                    //if(x===x.toLowerCase()) answer+=x.toUpperCase();
-                    //else answer+=x;
+                    // 더 사용하지 않는 방법이므로 변경
+                    // let num=x.charCodeAt();
+                    // if(num>=97 && num<=122) answer+=String.fromCharCode(num-32);
+                    // else answer+=x;
                 }
 
                 return answer;
