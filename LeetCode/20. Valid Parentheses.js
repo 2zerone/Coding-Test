@@ -1,23 +1,16 @@
 var isValid = function(s) {
-    let stack = [];
-    var obj = {
-        "]": "[",
-        "}": "{",
-        ")": "(",
-    };
-
-    for(var i = 0; i < s.length; i++) {
-        if(s[i] === "[" || s[i] === "{" || s[i] === "(") {
-            stack.push(s[i]);
-        } else {
-            var key = stack.pop();
-            if(maps[key] !== s[i]) {
-                return false;
-            }
-        }
+    const stack = [];
+    
+    for(let x of s) {
+        const num = stack[stack.length - 1];
+        
+        if(x === '(' || x === '[' || x === '{') stack.push(x);
+        else if(x === ')' && num === '(' && stack.length !== 0) stack.pop();
+        else if(x === ']' && num === '[' && stack.length !== 0) stack.pop();
+        else if(x === '}' && num === '{' && stack.length !== 0) stack.pop();
+        else return false;
     }
-    if(!stack.length) {
-        return true;
-    }
-    return false;
+    
+    if(stack.length === 0) return true;
+    else return false;
 };
