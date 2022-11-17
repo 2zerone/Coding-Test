@@ -9,7 +9,7 @@ for i in range(1, A+1):
             if k==0 or k==j:
                 tmp.append(1)
             else:
-                tmp.append(answer[i-1][j-1] + answer[i-1][j])
-        answer.push(tmp)
+                tmp.append(answer[j-1][k-1] + answer[j-1][k])
+        answer.append(tmp)
     for l in answer:
         print(*l)
