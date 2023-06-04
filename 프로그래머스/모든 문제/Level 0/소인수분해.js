@@ -16,3 +16,21 @@ function solution(n) {
     let ans = Array.from(new Set(prime));
     return ans.sort((a,b) => a - b);
 }
+
+// other answer
+function solution(n) {
+    let result = [];
+    let divisor = 2;
+    
+    while (n >= 2) {
+      if (n % divisor === 0) {
+        result.push(divisor)
+        n = n / divisor;
+      }
+      
+       else divisor ++;
+      
+    }
+    
+    return [...new Set(result)];
+  }
