@@ -1,4 +1,4 @@
-// intuitive code
+// Intuitive Code
 const solution = (numLog) => {
     const obj = {
         '1' : 'w',
@@ -15,7 +15,7 @@ const solution = (numLog) => {
     return arr.map((v) => obj[v]).join('');
 }
 
-// summary Code
+// Summary Code
 const solution2 = (numLog) => {
     const obj = {
         '1': 'w', '-1': 's', '10': 'd', '-10': 'a'
