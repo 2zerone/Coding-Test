@@ -16,6 +16,7 @@ const solution = arr => {
         );
 }
 
+// 시간복잡도 비교적 낮음
 const solution2 = (arr) => {
     return arr.map(v => {
         if(v >= 50 && !(v % 2)) return v / 2;
